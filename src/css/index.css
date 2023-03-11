@@ -118,6 +118,14 @@ header .current-date {
     border-top: 1px solid #dee2e6 !important;
   }
 }
+@media (min-width: 990px) {
+  .navbar-nav li.nav-item {
+    border-right: 1px solid #dee2e6 !important;
+  }
+  .navbar-nav li.nav-item:last-child {
+    border-right: 1px solid #3f497f !important;
+  }
+}
 ul.lists {
   width: 55px;
 
