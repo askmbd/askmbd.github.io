@@ -8,6 +8,18 @@ a {
 .nav-link {
   color: #fff;
 }
+
+.sticky-top {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + body {
+  padding-top: 60px;
+}
+
+
 ul,
 li {
   list-style: none;
