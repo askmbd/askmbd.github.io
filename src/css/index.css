@@ -158,4 +158,20 @@ ul.lists li {
 .media-body a {
   font-size: 14px;
 }
+.clip-path {
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  width: 190px;
+  height: 190px;
+}
+.counter-body {
+  padding-top: 10px;
+}
+.owl-carousel {
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.row.owl-carousel .col {
+  margin-right: 20px;
+}
 
