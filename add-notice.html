@@ -292,32 +292,18 @@
                 <tr style="background-color: #3f497f !important; color: #fff">
                   <th scope="col">তারিখ</th>
                   <th scope="col">শিরোনাম</th>
-                  <th scope="col">ভিউ</th>
+                  <th scope="col">ডাউনলোড </th>
                   <th scope="col">কন্ট্রোল</th>
                 </tr>
               </thead>
               <tbody id="table">
-                <!-- <tr>
-                  <th class="inform">03-33-2023</th>
-
-                  <td class="inform">class routine for class 5</td>
-                  <td class="viwe">
-                    <a href="#" class="bg-success text-white py-1 px-2 rounded">
-                      <i class="bi bi-eye pe-2"></i>Viwe
-                    </a>
-                  </td>
-                  <td class="inform">
-                    <a class="editBtn" data-date="${d.ID}">
-                      <i class="bi bi-pencil-square"></i>
-                    </a>
-                    <a class="text-danger deleteBtn" data-date="${d.ID}">
-                      <i class="bi bi-trash ps-2"></i>
-                    </a>
-                  </td>
-                </tr> -->
+               
               </tbody>
             </table>
-            <div class="col-md-12"></div>
+            <div class="col-md-12">
+              
+           
+            </div>
           </div>
         </div>
       </div>
@@ -372,7 +358,7 @@
         fr.readAsArrayBuffer(file);
         fr.onload = (f) => {
           const url =
-            "https://script.google.com/macros/s/AKfycbx0GPEztq9ze5dyqt_ViU-KsJyy7ZNNVfsJkcyUIrju9AtX4qOMRtcHKX2u2Jj3mkmw/exec";
+            "https://script.google.com/macros/s/AKfycbyv7UiOxkVoYTlNM7ASeZcqmlROwk2GlEsxnFTxPuAWbAhIJVL-qP9as1vzECKU_gCT/exec";
           const qs = new URLSearchParams({
             filename: file.name,
             mimeType: file.type,
@@ -390,8 +376,8 @@
             .then((res) => res.json())
             .then((data) => {
               //  let d = JSON.parse(data);
-              alert(data);
-              form.reset();
+              alert("Notice added successfully");
+              location.reload();
             })
             .catch(console.log);
         };
@@ -400,57 +386,31 @@
       // Sort results by id in descending order, take two
       // and return the age as an integer.
 
-      fetch("https://sheetdb.io/api/v1/xir6dlg2md4ba")
+      function getData(){
+        fetch("https://script.google.com/macros/s/AKfycbyv7UiOxkVoYTlNM7ASeZcqmlROwk2GlEsxnFTxPuAWbAhIJVL-qP9as1vzECKU_gCT/exec")
         .then((response) => response.json())
         .then((data) => {
-          console.log(data);
-          for (let d of data) {
+          console.log(data.data);
+          for (let d of data.data) {
             //console.log(d);
             table.innerHTML += `
               <tr  data-id='${d.Id}'>
                   <td class="inform">${d.Date}</td>
                   <td class="inform">${d.Subject}</td>
                   <td class="viwe">
-                    <a href="#" class="bg-success text-white py-1 px-2 rounded">
-                      <i class="bi bi-eye pe-2"></i>Viwe
+                    <a href="${d.file}" class="bg-success text-white py-1 px-2 rounded">
+                      <i class="bi bi-eye pe-2"></i>Download
                     </a>
                   </td>
                   <td class="inform" data-id="${d.Id}">
-
-                      <i class="bi bi-pencil-square" id='edit' onclick='edit("${d.Id}","${d.Subject}","${d.Date}","${d.Type}")'></i>
-
-                      <i class="text-danger bi bi-trash ps-2" id='delete' onclick='Delete("${d.Id}")'></i>
-
+                     <i class="text-danger bi bi-trash ps-2" id='delete' onclick='Delete("${d.Id}")'></i>
                   </td>
                 </tr> `;
           }
         });
-
-      function edit(Id, Subject, Date, Type) {
-        alert(Date, Subject, Type);
-        date.value = Date;
-        subject.value = Subject;
-        type.value = Type;
-        saveBtn.addEventListener("click", function (e) {
-          e.preventDefault();
-          fetch(`https://sheetdb.io/api/v1/xir6dlg2md4ba/Id/${Id}`, {
-            method: "PATCH",
-            headers: {
-              Accept: "application/json",
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-              data: {
-                "Date": document.getElementById("date").value,
-                "Subject": document.getElementById("subject").value,
-                "Type": document.getElementById("type").value,
-              },
-            }),
-          })
-            .then((response) => response.json())
-            .then((data) => alert("updated"));
-        });
       }
+      getData();
+     
 
       function Delete(id) {
         fetch(`https://sheetdb.io/api/v1/xir6dlg2md4ba/Id/${id}`, {
@@ -462,10 +422,12 @@
         })
           .then((response) => response.json())
           .then((data) => {
-            console.log(data);
-            location.reload();
+            console.log('deleted');
+            
           });
       }
+
+      
     </script>
   </body>
 </html>
