@@ -137,107 +137,22 @@
                       ===============================-->
       <div class="archive-page">
         <div class="container py-5">
+          <div class="title-section text-center mb-3">
+              <h2 class="fw-bolder">নোটিশ ও রুটিন </h2>
+              <img src="https://themesbazar.net/academic/wp-content/themes/AcadcmicTheme/assets/img/icon-image.png" alt="">
+           </div>
           <div class="table-responsive">
             <table class="table table-bordered border-primary text-center">
               <thead class="bg-primary">
                 <tr style="background-color: #3f497f !important; color: #fff">
-                  <th scope="col">তারিখ</th>
+                  <th scope="col">ক্রমিক নং </th>
                   <th scope="col">শিরোনাম</th>
-                  <th scope="col">ভিউ</th>
+                  <th scope="col">তারিখ </th>
                   <th scope="col">ডাউনলোড</th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-                  <th class="inform">January 25, 2020</th>
-
-                  <td class="inform">Notice</td>
-                  <td class="viwe">
-                    <a href="#" class="bg-success text-white py-1 px-2 rounded" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
-                      ><i class="bi bi-eye pe-2"></i>Viwe</a
-                    >
-                  </td>
-                  <td class="inform">
-                    <a href="#" class="bg-danger text-white py-1 px-2 rounded"
-                      ><i class="bi bi-download pe-2"></i>Download</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <th class="inform">January 25, 2020</th>
-
-                  <td class="inform">Notice</td>
-                  <td class="viwe">
-                    <a href="#" class="bg-success text-white py-1 px-2 rounded"
-                      ><i class="bi bi-eye pe-2"></i>Viwe</a
-                    >
-                  </td>
-                  <td class="inform">
-                    <a href="#" class="bg-danger text-white py-1 px-2 rounded"
-                      ><i class="bi bi-download pe-2"></i>Download</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <th class="inform">January 25, 2020</th>
-
-                  <td class="inform">Notice</td>
-                  <td class="viwe">
-                    <a href="#" class="bg-success text-white py-1 px-2 rounded"
-                      ><i class="bi bi-eye pe-2"></i>Viwe</a
-                    >
-                  </td>
-                  <td class="inform">
-                    <a href="#" class="bg-danger text-white py-1 px-2 rounded"
-                      ><i class="bi bi-download pe-2"></i>Download</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <th class="inform">January 25, 2020</th>
-
-                  <td class="inform">Notice</td>
-                  <td class="viwe">
-                    <a href="#" class="bg-success text-white py-1 px-2 rounded"
-                      ><i class="bi bi-eye pe-2"></i>Viwe</a
-                    >
-                  </td>
-                  <td class="inform">
-                    <a href="#" class="bg-danger text-white py-1 px-2 rounded"
-                      ><i class="bi bi-download pe-2"></i>Download</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <th class="inform">January 25, 2020</th>
-
-                  <td class="inform">Notice</td>
-                  <td class="viwe">
-                    <a href="#" class="bg-success text-white py-1 px-2 rounded"
-                      ><i class="bi bi-eye pe-2"></i>Viwe</a
-                    >
-                  </td>
-                  <td class="inform">
-                    <a href="#" class="bg-danger text-white py-1 px-2 rounded"
-                      ><i class="bi bi-download pe-2"></i>Download</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <th class="inform">January 25, 2020</th>
-
-                  <td class="inform">Notice</td>
-                  <td class="viwe">
-                    <a href="#" class="bg-success text-white py-1 px-2 rounded"
-                      ><i class="bi bi-eye pe-2"></i>Viwe</a
-                    >
-                  </td>
-                  <td class="inform">
-                    <a href="#" class="bg-danger text-white py-1 px-2 rounded"
-                      ><i class="bi bi-download pe-2"></i>Download</a
-                    >
-                  </td>
-                </tr>
+              <tbody id="table">
+                
               </tbody>
             </table>
             <div class="col-md-12"></div>
@@ -411,30 +326,34 @@
     <script src="src/js/owl.carousel.min.js"></script>
     <script src="src/js/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-      $(".owl-carousel").owlCarousel({
-        loop: true,
-        margin: 0,
-        autoplay: true,
-        autoplayTimeout: 5000,
-        autoplayHoverPause: false,
-        responsiveClass: true,
-        responsive: {
-          0: {
-            items: 1,
-          },
-          768: {
-            items: 2,
-          },
-          1100: {
-            items: 4,
-          },
-          1400: {
-            items: 4,
-            loop: false,
-          },
-        },
-      });
-    </script>
+   
+   <script>
+     let table = document.getElementById("table");
+    function getData(){
+        fetch("https://script.google.com/macros/s/AKfycby9Qwdok9J8lQekFPbQ2vsZTgVml0myWF145hcsPeLSVIZVS72VcIwdXR4afDEFrK9I/exec")
+        .then((response) => response.json())
+        .then((data) => {
+          let d = data.data;
+          for (let i = 0;  i < data.length; i++ ) {
+
+
+            console.log(data[i]);
+            table.innerHTML += `
+              <tr>
+                  <td> ${i} </td>
+                  <td class="inform">${d[i].Subject}</td>
+                  <td class="inform">${d[i].Date}</td>
+                  <td class="viwe">
+                    <a href="${d[i].file}" class="bg-success text-white py-1 px-2 rounded">
+                      <i class="bi bi-eye pe-2"></i>Download
+                    </a>
+                  </td>
+                </tr> `;
+          }
+        });
+      }
+      getData();
+     
+   </script>
   </body>
 </html>
