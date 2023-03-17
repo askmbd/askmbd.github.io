@@ -330,14 +330,14 @@
    <script>
      let table = document.getElementById("table");
     function getData(){
-        fetch("https://script.google.com/macros/s/AKfycby9Qwdok9J8lQekFPbQ2vsZTgVml0myWF145hcsPeLSVIZVS72VcIwdXR4afDEFrK9I/exec")
+        fetch("https://script.google.com/macros/s/AKfycbyv7UiOxkVoYTlNM7ASeZcqmlROwk2GlEsxnFTxPuAWbAhIJVL-qP9as1vzECKU_gCT/exec")
         .then((response) => response.json())
         .then((data) => {
           let d = data.data;
-          for (let i = 0;  i < data.length; i++ ) {
+          for (let i = 0;  i < d.length; i++ ) {
 
 
-            console.log(data[i]);
+            console.log(d[i]);
             table.innerHTML += `
               <tr>
                   <td> ${i} </td>
