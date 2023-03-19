@@ -61,7 +61,6 @@
         style="background-color: #f8f5e4"
       >
         <div class="container pt-0 pb-0">
-          <!-- <img alt='ASKM_LOGO' class='img-fluid' src='https://raw.githubusercontent.com/alsaifdev/hpapp/main/20230220_144657.jpg'/> -->
           <img
             alt="ASKM_LOGO"
             class="img-fluid"
@@ -141,104 +140,13 @@
             <table class="table table-bordered border-primary text-center">
               <thead class="bg-primary">
                 <tr style="background-color: #3f497f !important; color: #fff">
+                  <th scope="col">ক্রমিক নং</th>
                   <th scope="col">তারিখ</th>
                   <th scope="col">শিরোনাম</th>
-                  <th scope="col">ভিউ</th>
                   <th scope="col">ডাউনলোড</th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-                  <th class="inform">January 25, 2020</th>
-
-                  <td class="inform">Routine</td>
-                  <td class="viwe">
-                    <a href="#" class="bg-success text-white py-1 px-2 rounded"
-                      ><i class="bi bi-eye pe-2"></i>Viwe</a
-                    >
-                  </td>
-                  <td class="inform">
-                    <a href="#" class="bg-danger text-white py-1 px-2 rounded"
-                      ><i class="bi bi-download pe-2"></i>Download</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <th class="inform">January 25, 2020</th>
-
-                  <td class="inform">Routine</td>
-                  <td class="viwe">
-                    <a href="#" class="bg-success text-white py-1 px-2 rounded"
-                      ><i class="bi bi-eye pe-2"></i>Viwe</a
-                    >
-                  </td>
-                  <td class="inform">
-                    <a href="#" class="bg-danger text-white py-1 px-2 rounded"
-                      ><i class="bi bi-download pe-2"></i>Download</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <th class="inform">January 25, 2020</th>
-
-                  <td class="inform">Routine</td>
-                  <td class="viwe">
-                    <a href="#" class="bg-success text-white py-1 px-2 rounded"
-                      ><i class="bi bi-eye pe-2"></i>Viwe</a
-                    >
-                  </td>
-                  <td class="inform">
-                    <a href="#" class="bg-danger text-white py-1 px-2 rounded"
-                      ><i class="bi bi-download pe-2"></i>Download</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <th class="inform">January 25, 2020</th>
-
-                  <td class="inform">Routine</td>
-                  <td class="viwe">
-                    <a href="#" class="bg-success text-white py-1 px-2 rounded"
-                      ><i class="bi bi-eye pe-2"></i>Viwe</a
-                    >
-                  </td>
-                  <td class="inform">
-                    <a href="#" class="bg-danger text-white py-1 px-2 rounded"
-                      ><i class="bi bi-download pe-2"></i>Download</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <th class="inform">January 25, 2020</th>
-
-                  <td class="inform">Routine</td>
-                  <td class="viwe">
-                    <a href="#" class="bg-success text-white py-1 px-2 rounded"
-                      ><i class="bi bi-eye pe-2"></i>Viwe</a
-                    >
-                  </td>
-                  <td class="inform">
-                    <a href="#" class="bg-danger text-white py-1 px-2 rounded"
-                      ><i class="bi bi-download pe-2"></i>Download</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <th class="inform">January 25, 2020</th>
-
-                  <td class="inform">Routine</td>
-                  <td class="viwe">
-                    <a href="#" class="bg-success text-white py-1 px-2 rounded"
-                      ><i class="bi bi-eye pe-2"></i>Viwe</a
-                    >
-                  </td>
-                  <td class="inform">
-                    <a href="#" class="bg-danger text-white py-1 px-2 rounded"
-                      ><i class="bi bi-download pe-2"></i>Download</a
-                    >
-                  </td>
-                </tr>
-              </tbody>
+              <tbody id="table"></tbody>
             </table>
             <div class="col-md-12"></div>
           </div>
@@ -380,34 +288,36 @@
         </div>
       </footer>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="src/js/owl.carousel.min.js"></script>
+
     <script src="src/js/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
     <script>
-      $(".owl-carousel").owlCarousel({
-        loop: true,
-        margin: 0,
-        autoplay: true,
-        autoplayTimeout: 5000,
-        autoplayHoverPause: false,
-        responsiveClass: true,
-        responsive: {
-          0: {
-            items: 1,
-          },
-          768: {
-            items: 2,
-          },
-          1100: {
-            items: 4,
-          },
-          1400: {
-            items: 4,
-            loop: false,
-          },
-        },
-      });
+      let table = document.getElementById("table");
+      function getData() {
+        fetch(
+          "https://script.google.com/macros/s/AKfycbyv7UiOxkVoYTlNM7ASeZcqmlROwk2GlEsxnFTxPuAWbAhIJVL-qP9as1vzECKU_gCT/exec"
+        )
+          .then((response) => response.json())
+          .then((data) => {
+            let d = data.data;
+            for (let i = 1; i < d.length; i++) {
+              console.log(d[i]);
+              table.innerHTML += `
+              <tr>
+                  <td> ${i} </td>
+                  <td class="inform">${d[i].Subject}</td>
+                  <td class="inform">${d[i].Date}</td>
+                  <td class="viwe">
+                    <a href="${d[i].file}" class="bg-danger text-white py-1 px-2 rounded">
+                      <i class="bi bi-download pe-2"></i>Download
+                    </a>
+                  </td>
+                </tr> `;
+            }
+          });
+      }
+      getData();
     </script>
   </body>
 </html>
