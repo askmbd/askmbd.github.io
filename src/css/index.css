@@ -159,12 +159,23 @@ ul.lists li {
   font-size: 14px;
 }
 .clip-path {
-  border-radius:50%;
+  border-radius: 50%;
   width: 150px;
   height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(#0017bd, #0283ff);
 }
-.counter-body {
-  padding-top: 10px;
+.clip-path .clip-path-inner {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: linear-gradient(#0283ff, #0017bd);
 }
 .owl-carousel {
   padding: 0 10px;
