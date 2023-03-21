@@ -40,7 +40,7 @@
           class="row"
           action="https://sheetdb.io/api/v1/pluzwl54xpz6z"
           method="POST"
-          id="sheetdb-form"
+          name="submit-to-google-sheet"
         >
           <div class="col-12">
             <div class="card">
@@ -55,7 +55,7 @@
                       type="text"
                       class="form-control"
                       id="stname"
-                      name="data[stname]"
+                      name="stname"
                     />
                   </div>
                   <div class="col-md-4">
@@ -64,7 +64,7 @@
                       type="text"
                       class="form-control"
                       id="staname"
-                      name="data[staname]"
+                      name="staname"
                     />
                   </div>
                   <div class="col-md-4">
@@ -75,12 +75,12 @@
                       type="text"
                       class="form-control"
                       id="stiname"
-                      name="data[stiname]"
+                      name="stiname"
                     />
                   </div>
                   <div class="col-md-2">
                     <label for="class" class="form-label">শ্রেণিঃ </label>
-                    <select id="class" name="data[class]" class="form-select">
+                    <select id="class" name="class" class="form-select">
                       <option value="প্রথম শ্রেনি" selected>
                         প্রথম শ্রেনি
                       </option>
@@ -92,7 +92,7 @@
                   </div>
                   <div class="col-md-2">
                     <label for="group" class="form-label">বিভাগঃ </label>
-                    <select id="group" name="data[group]" class="form-select">
+                    <select id="group" name="group" class="form-select">
                       <option value="নূরানি ও মক্তব বিভাগ" selected>
                         নূরানি ও মক্তব বিভাগ
                       </option>
@@ -104,11 +104,7 @@
                     <label for="category" class="form-label"
                       >আবাসিক/আনাবাসিক
                     </label>
-                    <select
-                      id="category"
-                      name="data[category]"
-                      class="form-select"
-                    >
+                    <select id="category" name="category" class="form-select">
                       <option value="আবাসিক" selected>আবাসিক</option>
                       <option value="আনাবাসিক">আনাবাসিক</option>
                     </select>
@@ -121,7 +117,7 @@
                       type="date"
                       class="form-control"
                       id="birthDate"
-                      name="data[birthDate]"
+                      name="birthDate"
                     />
                   </div>
                   <div class="col-md-2">
@@ -130,7 +126,7 @@
                       type="number"
                       class="form-control"
                       id="age"
-                      name="data[age]"
+                      name="age"
                     />
                   </div>
                   <div class="col-md-2">
@@ -149,7 +145,7 @@
                       type="text"
                       class="form-control"
                       id="fileIn"
-                      name="data[image]"
+                      name="image"
                       style="
                         width: 0;
                         height: 0;
@@ -162,7 +158,7 @@
                       type="text"
                       class="form-control"
                       id="intyDate"
-                      name="data[intyDate]"
+                      name="intyDate"
                       style="
                         width: 0;
                         height: 0;
@@ -194,7 +190,7 @@
                       type="text"
                       class="form-control"
                       id="faName"
-                      name="data[faName]"
+                      name="faName"
                     />
                   </div>
                   <div class="col-md-3">
@@ -205,7 +201,7 @@
                       type="text"
                       class="form-control"
                       id="faNameIng"
-                      name="data[faNameIng]"
+                      name="faNameIng"
                     />
                   </div>
                   <div class="col-md-3">
@@ -213,10 +209,10 @@
                       >ভোটার আইডি/জন্ম নিবন্ধন নংঃ</label
                     >
                     <input
-                      type="password"
+                      type="number"
                       class="form-control"
                       id="faIdNum"
-                      name="data[faIdNum]"
+                      name="faIdNum"
                     />
                   </div>
                   <div class="col-md-3">
@@ -227,16 +223,16 @@
                       type="text"
                       class="form-control"
                       id="faStudy"
-                      name="data[faStudy]"
+                      name="faStudy"
                     />
                   </div>
                   <div class="col-md-3">
                     <label for="faProfession" class="form-label">পেশাঃ</label>
                     <input
-                      type="email"
+                      type="text"
                       class="form-control"
                       id="faProfession"
-                      name="data[faProfession]"
+                      name="faProfession"
                     />
                   </div>
                   <div class="col-md-3">
@@ -244,19 +240,19 @@
                       >মাসিক ইনকামঃ
                     </label>
                     <input
-                      type="password"
+                      type="number"
                       class="form-control"
                       id="faIncome"
-                      name="data[faIncome]"
+                      name="faIncome"
                     />
                   </div>
                   <div class="col-md-3">
                     <label for="faPhone" class="form-label">মোবাইল নংঃ</label>
                     <input
-                      type="text"
+                      type="number"
                       class="form-control"
                       id="faPhone"
-                      name="data[faPhone]"
+                      name="faPhone"
                     />
                   </div>
                 </div>
@@ -269,7 +265,7 @@
                       type="text"
                       class="form-control"
                       id="maName"
-                      name="data[maName]"
+                      name="maName"
                     />
                   </div>
                   <div class="col-md-3">
@@ -280,7 +276,7 @@
                       type="text"
                       class="form-control"
                       id="maNameIng"
-                      name="data[maNameIng]"
+                      name="maNameIng"
                     />
                   </div>
                   <div class="col-md-3">
@@ -291,7 +287,7 @@
                       type="number"
                       class="form-control"
                       id="maIdNum"
-                      name="data[maIdNum]"
+                      name="maIdNum"
                     />
                   </div>
                   <div class="col-md-3">
@@ -302,16 +298,16 @@
                       type="text"
                       class="form-control"
                       id="maStudy"
-                      name="data[maStudy]"
+                      name="maStudy"
                     />
                   </div>
                   <div class="col-md-3">
                     <label for="maProfession" class="form-label">পেশাঃ</label>
                     <input
-                      type="email"
+                      type="text"
                       class="form-control"
                       id="maProfession"
-                      name="data[maProfession]"
+                      name="maProfession"
                     />
                   </div>
                   <div class="col-md-3">
@@ -322,16 +318,16 @@
                       type="number"
                       class="form-control"
                       id="maIncome"
-                      name="data[maIncome]"
+                      name="maIncome"
                     />
                   </div>
                   <div class="col-md-3">
                     <label for="maPhone" class="form-label">মোবাইল নংঃ</label>
                     <input
-                      type="text"
+                      type="number"
                       class="form-control"
                       id="maPhone"
-                      name="data[maPhone]"
+                      name="maPhone"
                     />
                   </div>
                 </div>
@@ -349,7 +345,7 @@
                       type="text"
                       class="form-control"
                       id="preVillage"
-                      name="data[preVillage]"
+                      name="preVillage"
                       placeholder="মেহেরপুর"
                     />
                   </div>
@@ -359,7 +355,7 @@
                       type="text"
                       class="form-control"
                       id="preWord"
-                      name="data[preWord]"
+                      name="preWord"
                       placeholder="১ নং ওয়ার্ড "
                     />
                   </div>
@@ -369,7 +365,7 @@
                       type="text"
                       class="form-control"
                       id="prePost"
-                      name="data[prePost]"
+                      name="prePost"
                     />
                   </div>
                   <div class="col-md-2">
@@ -378,14 +374,14 @@
                       type="text"
                       class="form-control"
                       id="preUni"
-                      name="data[preUni]"
+                      name="preUni"
                     />
                   </div>
                   <div class="col-md-2">
                     <label for="preUpojela" class="form-label">উপজেলাঃ </label>
                     <select
                       id="preUpojela"
-                      name="data[preUpojela]"
+                      name="preUpojela"
                       class="form-select"
                     >
                       <option selected>মেহেরপুর সদর</option>
@@ -395,11 +391,7 @@
                   </div>
                   <div class="col-md-2">
                     <label for="preJela" class="form-label">জেলাঃ </label>
-                    <select
-                      id="preJela"
-                      name="data[preJela]"
-                      class="form-select"
-                    >
+                    <select id="preJela" name="preJela" class="form-select">
                       <option selected>মেহেরপুর</option>
                       <option>চুয়াডাঙ্গা</option>
                       <option>কুষ্টিয়া</option>
@@ -416,7 +408,7 @@
                       type="text"
                       class="form-control"
                       id="parVillage"
-                      name="data[parVillage]"
+                      name="parVillage"
                       placeholder="মেহেরপুর"
                     />
                   </div>
@@ -426,7 +418,7 @@
                       type="text"
                       class="form-control"
                       id="parWord"
-                      name="data[parWord]"
+                      name="parWord"
                       placeholder="১ নং ওয়ার্ড "
                     />
                   </div>
@@ -436,7 +428,7 @@
                       type="text"
                       class="form-control"
                       id="parPost"
-                      name="data[parPost]"
+                      name="parPost"
                     />
                   </div>
                   <div class="col-md-2">
@@ -445,14 +437,14 @@
                       type="text"
                       class="form-control"
                       id="parUni"
-                      name="data[parUni]"
+                      name="parUni"
                     />
                   </div>
                   <div class="col-md-2">
                     <label for="parUpojela" class="form-label">উপজেলাঃ </label>
                     <select
                       id="parUpojela"
-                      name="data[parUpojela]"
+                      name="parUpojela"
                       class="form-select"
                     >
                       <option selected>মেহেরপুর সদর</option>
@@ -462,11 +454,7 @@
                   </div>
                   <div class="col-md-2">
                     <label for="parJela" class="form-label">জেলাঃ </label>
-                    <select
-                      id="parJela"
-                      name="data[parJela]"
-                      class="form-select"
-                    >
+                    <select id="parJela" name="parJela" class="form-select">
                       <option selected>মেহেরপুর</option>
                       <option>চুয়াডাঙ্গা</option>
                       <option>কুষ্টিয়া</option>
@@ -485,25 +473,25 @@
                       type="text"
                       class="form-control"
                       id="ovivabok"
-                      name="data[ovivabok]"
+                      name="ovivabok"
                     />
                   </div>
                   <div class="col-md-3">
                     <label for="ovivabokNum" class="form-label">মোবাঃ</label>
                     <input
-                      type="email"
+                      type="number"
                       class="form-control"
                       id="ovivabokNum"
-                      name="data[ovivabokNum]"
+                      name="ovivabokNum"
                     />
                   </div>
                   <div class="col-md-3">
                     <label for="ovivabokProf" class="form-label">পেশাঃ</label>
                     <input
-                      type="password"
+                      type="text"
                       class="form-control"
                       id="ovivabokProf"
-                      name="data[ovivabokProf]"
+                      name="ovivabokProf"
                     />
                   </div>
                   <div class="col-md-3">
@@ -514,7 +502,7 @@
                       type="text"
                       class="form-control"
                       id="oviRelation"
-                      name="data[oviRelation]"
+                      name="oviRelation"
                       placeholder="চাচা "
                     />
                   </div>
@@ -524,7 +512,7 @@
                       type="text"
                       class="form-control"
                       id="oviAdress"
-                      name="data[oviAdress]"
+                      name="oviAdress"
                       placeholder="পূর্ণ ঠিকানা....."
                     />
                   </div>
@@ -543,7 +531,7 @@
                       type="text"
                       class="form-control"
                       id="preInsName"
-                      name="data[preInsName]"
+                      name="preInsName"
                     />
                   </div>
                   <div class="col-md-3">
@@ -554,7 +542,7 @@
                       type="text"
                       class="form-control"
                       id="preInsVillage"
-                      name="data[preInsVillage]"
+                      name="preInsVillage"
                       placeholder="মেহেরপুর"
                     />
                   </div>
@@ -565,7 +553,7 @@
                       type="text"
                       class="form-control"
                       id="preInsPost"
-                      name="data[preInsPost]"
+                      name="preInsPost"
                     />
                   </div>
                   <div class="col-md-2">
@@ -574,7 +562,7 @@
                       type="text"
                       class="form-control"
                       id="preInsUni"
-                      name="data[preInsUni]"
+                      name="preInsUni"
                     />
                   </div>
                   <div class="col-md-2">
@@ -583,7 +571,7 @@
                     </label>
                     <select
                       id="preInsUpojela"
-                      name="data[preInsUpojela]"
+                      name="preInsUpojela"
                       class="form-select"
                     >
                       <option selected>মেহেরপুর সদর</option>
@@ -595,7 +583,7 @@
                     <label for="preInsJela" class="form-label">জেলাঃ </label>
                     <select
                       id="preInsJela"
-                      name="data[preInsJela]"
+                      name="preInsJela"
                       class="form-select"
                     >
                       <option selected>মেহেরপুর</option>
@@ -642,7 +630,7 @@
                   >
                   <input
                     type="text"
-                    class="form-control"
+                    class="form-control student-print-Value"
                     id="recipient-name"
                     required
                   />
@@ -657,7 +645,9 @@
               >
                 Close
               </button>
-              <button type="button" class="btn btn-primary">Search</button>
+              <button type="button" class="btn btn-primary student-print-btn">
+                Search
+              </button>
             </div>
           </div>
         </div>
@@ -667,6 +657,15 @@
 
     <!-- End #main -->
     <script>
+      let forms = document.querySelector("form");
+      let stPrintBtn = document.querySelector(".student-print-btn");
+      let stPrintValue = document.querySelector(".student-print-Value");
+      stPrintBtn.addEventListener("click", () => {
+        console.log(stPrintValue.value);
+        sessionStorage.setItem("number", stPrintValue.value);
+        stPrintValue.value = "";
+      });
+
       let inputs = document.querySelectorAll("input");
       inputs.forEach((input) => {
         input.setAttribute("required", "required");
@@ -685,12 +684,12 @@
         console.log(intyDate.value);
       });
 
-      let url =
-        "https://script.google.com/macros/s/AKfycbzEY7wP72x1zg_mojEWJbJrpUyaG6LUPumQqmjIRWm47aTJ1CxGxev2lbd6sQPzpFeOCQ/exec";
-      let file = document.querySelector("#file");
+      let fileI = document.querySelector("#file");
       let img = document.querySelector("img");
       let fileIn = document.querySelector("#fileIn");
-      file.addEventListener("change", () => {
+      let url =
+        "https://script.google.com/macros/s/AKfycbxduFy6hP4JS970NlEQL_agDJEvun3b7t-ahmsOT4Z6W_A3ydWt3f7HlZ-5k2vodzax/exec";
+      fileI.addEventListener("change", () => {
         let fr = new FileReader();
         fr.addEventListener("loadend", () => {
           let res = fr.result;
@@ -717,20 +716,21 @@
       });
     </script>
     <script>
-      var form = document.getElementById("sheetdb-form");
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbxiBOMd-OllNvHqT0vpFX4BfutbpeZhWF4GGlKnhJNm6mbuxXJc2Gf_4PtCxjNkIbnYGQ/exec";
+      const form = document.forms["submit-to-google-sheet"];
+      let success_sms = document.querySelector(".success_sms");
       form.addEventListener("submit", (e) => {
         e.preventDefault();
-        fetch(form.action, {
-          method: "POST",
-          body: new FormData(document.getElementById("sheetdb-form")),
-        })
-          .then((response) => response.json())
-          .then((html) => {
-            // you can put any JS code here
-            alert("success");
-          });
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            alert("succeed");
+            form.reset();
+          })
+          .catch((error) => console.error("Error!", error.message));
       });
     </script>
+
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
       integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
