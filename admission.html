@@ -708,14 +708,13 @@
           })
             .then((r) => r.text())
             .then((data) => {
-              alert(data);
               fileIn.value = data;
             });
         });
         fr.readAsDataURL(file.files[0]);
       });
-    </script>
-    <script>
+   
+      
       const scriptURL =
         "https://script.google.com/macros/s/AKfycbxiBOMd-OllNvHqT0vpFX4BfutbpeZhWF4GGlKnhJNm6mbuxXJc2Gf_4PtCxjNkIbnYGQ/exec";
       const form = document.forms["submit-to-google-sheet"];
@@ -724,8 +723,9 @@
         e.preventDefault();
         fetch(scriptURL, { method: "POST", body: new FormData(form) })
           .then((response) => {
-            alert("succeed");
+            alert("Form submited successfully!");
             form.reset();
+            img.src = "https://digiedubd.com/3/assets/images/avatars/9.jpg";
           })
           .catch((error) => console.error("Error!", error.message));
       });
