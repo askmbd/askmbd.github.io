@@ -309,8 +309,9 @@
         )
           .then((response) => response.json())
           .then((data) => {
-	     let i = 1;
-            for (let d of data.data) {
+	    let i = 1;
+            let notices = data.data.filter((notice) => notice.Type == "Notice");
+            for (let d of notices) {
               let dd = new Date(d.Date);
               let Td =
                 dd.getFullYear() + "-" + dd.getMonth() + 1 + "-" + dd.getDate();
