@@ -313,8 +313,8 @@
               let dd = new Date(d.Date);
               let Td =
                 dd.getFullYear() + "-" + dd.getMonth() + 1 + "-" + dd.getDate();
-              if (d.Type == "Notice") {
-                table.innerHTML += `
+              
+              table.innerHTML += `
               <tr>
                   <td> ${i} </td>
                   <td class="inform">${d.Subject}</td>
@@ -325,7 +325,7 @@
                     </a>
                   </td>
                 </tr> `;
-              }
+              
               i++;
             }
           });
