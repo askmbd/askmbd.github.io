@@ -320,6 +320,7 @@
       let saveBtn = document.getElementById("saveBtn");
       let flnt = document.getElementById("file");
       flnt.addEventListener("change", function () {
+        e.preventDefault();
         let file = flnt.files[0];
         let src = URL.createObjectURL(file);
         let img = document.querySelector(".img");
