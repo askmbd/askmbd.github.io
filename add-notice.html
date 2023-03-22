@@ -363,6 +363,9 @@
             console.log(data.data);
             for (let d of data.data) {
               //console.log(d);
+              let dd = new Date(d.Date);
+              let Td =
+                dd.getFullYear() + "-" + dd.getMonth() + 1 + "-" + dd.getDate();
               table.innerHTML += `
               <tr  data-id='${d.Id}'>
                   <td class="inform">${d.Date}</td>
