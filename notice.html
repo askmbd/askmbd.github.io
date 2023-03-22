@@ -315,7 +315,6 @@
               let dd = new Date(d.Date);
               let Td =
                 dd.getFullYear() + "-" + dd.getMonth() + 1 + "-" + dd.getDate();
-              if (d.Type == "Notice") {
                 table.innerHTML += `
               <tr>
                   <td> ${i} </td>
@@ -327,7 +326,6 @@
                     </a>
                   </td>
                 </tr> `;
-              }
               i++;
             }
           });
