@@ -309,13 +309,13 @@
         )
           .then((response) => response.json())
           .then((data) => {
-	    let i = 1;	
+	     let i = 1;
             for (let d of data.data) {
-             
-	      let dd = new Date(d.Date);
+              let dd = new Date(d.Date);
               let Td =
                 dd.getFullYear() + "-" + dd.getMonth() + 1 + "-" + dd.getDate();
-              table.innerHTML += `
+              if (d.Type == "Notice") {
+                table.innerHTML += `
               <tr>
                   <td> ${i} </td>
                   <td class="inform">${d.Subject}</td>
@@ -326,7 +326,8 @@
                     </a>
                   </td>
                 </tr> `;
-		 i++;   
+              }
+              i++;
             }
           });
       }
