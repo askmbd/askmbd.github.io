@@ -309,20 +309,24 @@
         )
           .then((response) => response.json())
           .then((data) => {
-            let d = data.data;
-            for (let i = 1; i < d.length; i++) {
+	    let i = 1;	
+            for (let d of data.data) {
               console.log(d[i]);
+	      let dd = new Date(d.Date);
+              let Td =
+                dd.getFullYear() + "-" + dd.getMonth() + 1 + "-" + dd.getDate();
               table.innerHTML += `
               <tr>
                   <td> ${i} </td>
-                  <td class="inform">${d[i].Subject}</td>
-                  <td class="inform">${d[i].Date}</td>
+                  <td class="inform">${d.Subject}</td>
+                  <td class="inform">${Td}</td>
                   <td class="viwe">
                     <a href="${d[i].file}" class="bg-danger text-white py-1 px-2 rounded">
                       <i class="bi bi-download pe-2"></i>Download
                     </a>
                   </td>
                 </tr> `;
+		 i++;   
             }
           });
       }
