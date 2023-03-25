@@ -660,10 +660,14 @@
       let forms = document.querySelector("form");
       let stPrintBtn = document.querySelector(".student-print-btn");
       let stPrintValue = document.querySelector(".student-print-Value");
-      stPrintBtn.addEventListener("click", () => {
+       stPrintBtn.addEventListener("click", () => {
         console.log(stPrintValue.value);
-        sessionStorage.setItem("number", stPrintValue.value);
-        stPrintValue.value = "";
+        if (stPrintValue.value === "") {
+        } else {
+          sessionStorage.setItem("number", stPrintValue.value);
+          stPrintValue.value = "";
+          location.assign("/print-student");
+        }
       });
 
       let inputs = document.querySelectorAll("input");
