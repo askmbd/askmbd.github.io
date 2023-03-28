@@ -213,17 +213,11 @@
     <main id="main" class="main">
       <div class="archive-page">
         <div class="container py-3">
-          <div class="add-notice py-2 border rounded px-2 mb-4">
-            <form id="form">
+          <div class="add-notice py-2 border rounded bg-white px-2 mb-4">
+            <div id="form">
               <div class="row">
-                <div class="col-md-2 mt-3">
-                  <label for="date" class="form-label">তারিখঃ </label>
-                  <input
-                    type="date"
-                    name="date"
-                    id="date"
-                    class="form-control"
-                  />
+                <div class="col-12 mt-3">
+                  <h5 class="fw-bold">Basic Details</h5>
                 </div>
                 <div class="col-md-4 mt-3">
                   <label for="subject" class="form-label"> নামঃ </label>
@@ -243,7 +237,51 @@
                     name="faname"
                   />
                 </div>
-                <div class="col-md-2 mt-3">
+                <div class="col-md-4 mt-3">
+                  <label for="gender" class="form-label">লিঙ্গঃ </label>
+                  <select id="gender" class="form-select" name="gender">
+                    <option value="পুরুষ">পুরুষ</option>
+                    <option value="মহিলা">মহিলা</option>
+                  </select>
+                </div>
+
+                <div class="col-md-4 mt-3">
+                  <label for="Bdate" class="form-label">জন্ম তারিখঃ </label>
+                  <input
+                    type="date"
+                    name="bdate"
+                    id="bdate"
+                    class="form-control"
+                  />
+                </div>
+                <div class="col-md-4 mt-3">
+                  <label for="age" class="form-label">বয়সঃ </label>
+                  <input
+                    type="number"
+                    name="age"
+                    id="age"
+                    class="form-control"
+                  />
+                </div>
+                <div class="col-md-4 mt-3">
+                  <label for="date" class="form-label">যোগদানের তারিখঃ </label>
+                  <input
+                    type="date"
+                    name="date"
+                    id="date"
+                    class="form-control"
+                  />
+                </div>
+                <div class="col-md-4 mt-3">
+                  <label for="phone" class="form-label">মোবাইল নাম্বারঃ </label>
+                  <input
+                    type="number"
+                    name="number"
+                    id="number"
+                    class="form-control"
+                  />
+                </div>
+                <div class="col-md-4 mt-3">
                   <label for="subject" class="form-label"
                     >শিক্ষাগত যোগ্যতাঃ
                   </label>
@@ -254,7 +292,30 @@
                     name="study"
                   />
                 </div>
-                <div class="col-md-3 mt-3">
+                <div class="col-md-4 mt-3">
+                  <label for="exprence" class="form-label">অভিজ্ঞতাঃ </label>
+                  <input
+                    type="text"
+                    id="exprence"
+                    class="form-control"
+                    name="exprence"
+                  />
+                </div>
+                <div class="col-md-4 mt-3">
+                  <label for="type" class="form-label">ধরনঃ </label>
+                  <select name="type" id="type" class="form-select">
+                    <option value="জেনারেল শিক্ষিকা">জেনারেল শিক্ষিকা</option>
+                    <option value="জেনারেল শিক্ষক">জেনারেল শিক্ষক</option>
+                    <option value="আলেম">আলেম</option>
+                    <option value="আলেমা">আলেমা</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 mt-3">
+                  <h5 class="fw-bold">Address</h5>
+                </div>
+                <div class="col-md-4 mt-3">
                   <label for="Village" class="form-label">গ্রাম/মহল্লাঃ </label>
                   <input
                     type="text"
@@ -264,8 +325,7 @@
                     placeholder="মেহেরপুর"
                   />
                 </div>
-
-                <div class="col-md-3 mt-3">
+                <div class="col-md-4 mt-3">
                   <label for="Post" class="form-label">ডাকঘরঃ </label>
                   <input
                     type="text"
@@ -274,11 +334,11 @@
                     name="Post"
                   />
                 </div>
-                <div class="col-md-2 mt-3">
+                <div class="col-md-4 mt-3">
                   <label for="Uni" class="form-label">ইউনিয়নঃ </label>
                   <input type="text" class="form-control" id="Uni" name="Uni" />
                 </div>
-                <div class="col-md-2 mt-3">
+                <div class="col-md-4 mt-3">
                   <label for="Upojela" class="form-label">উপজেলাঃ </label>
                   <select id="Upojela" name="Upojela" class="form-select">
                     <option selected>মেহেরপুর সদর</option>
@@ -286,7 +346,7 @@
                     <option>গাংনি</option>
                   </select>
                 </div>
-                <div class="col-md-2 mt-3">
+                <div class="col-md-4 mt-3">
                   <label for="Jela" class="form-label">জেলাঃ </label>
                   <select id="Jela" name="Jela" class="form-select">
                     <option selected>মেহেরপুর</option>
@@ -294,32 +354,7 @@
                     <option>কুষ্টিয়া</option>
                   </select>
                 </div>
-                <div class="col-md-3 mt-3">
-                  <label for="Bdate" class="form-label">জন্ম তারিখঃ </label>
-                  <input
-                    type="date"
-                    name="bdate"
-                    id="bdate"
-                    class="form-control"
-                  />
-                </div>
-                <div class="col-md-2 mt-3">
-                  <label for="age" class="form-label">বয়সঃ </label>
-                  <input
-                    type="number"
-                    name="age"
-                    id="age"
-                    class="form-control"
-                  />
-                </div>
-                <div class="col-md-3 mt-3">
-                  <label for="type" class="form-label">ধরনঃ </label>
-                  <select name="type" id="type" class="form-select">
-                    <option value="Notice">Notice</option>
-                    <option value="Routine">Routine</option>
-                  </select>
-                </div>
-                <div class="col-md-3 mt-3">
+                <div class="col-md-4 mt-3">
                   <label for="file" class="form-label">ফাইলঃ </label>
                   <input
                     type="file"
@@ -328,34 +363,14 @@
                     class="form-control"
                   />
                 </div>
-                <div class="col-md-1 mt-3">
-                  <label for="" class="d-none d-md-block form-label"
-                    >সংরক্ষন
-                  </label>
-                  <button
-                    type="submit"
-                    class="btn btn-primary w-100"
-                    id="saveBtn"
-                  >
-                    Save
-                  </button>
-                </div>
               </div>
-            </form>
-          </div>
-          <div class="table-responsive">
-            <table class="table table-bordered border-primary text-center">
-              <thead class="bg-primary">
-                <tr style="background-color: #3f497f !important; color: #fff">
-                  <th scope="col">তারিখ</th>
-                  <th scope="col">নাম</th>
-                  <th scope="col">ধরন</th>
-                  <th scope="col">ডাউনলোড</th>
-                </tr>
-              </thead>
-              <tbody id="table"></tbody>
-            </table>
-            <div class="col-md-12"></div>
+
+              <div class="col-12 mt-4">
+                <button type="button" class="btn btn-primary" id="saveBtn">
+                  Save
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -392,14 +407,14 @@
       let type = document.getElementById("type");
       let saveBtn = document.getElementById("saveBtn");
 
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        const file = form.file.files[0];
+      saveBtn.addEventListener("click", () => {
+        let files = document.getElementById("file");
+        const file = files.files[0];
         const fr = new FileReader();
         fr.readAsArrayBuffer(file);
         fr.onload = (f) => {
           const url =
-            "https://script.google.com/macros/s/AKfycbwgjeDUVwebvQLb1A3h3TvarMoN1cw_J2RHfw6GiD0I-Gm8HPAADTzUU4kwzsMtxVgiQA/exec";
+            "https://script.google.com/macros/s/AKfycbzTOe02WpUYSWioXMkfvqQfVPI65EOavlC1gk2XPbdnv73jPvVuyGmN2jIKPWHDsSR8RA/exec";
           const qs = new URLSearchParams({
             filename: file.name,
             mimeType: file.type,
@@ -410,22 +425,24 @@
               file: [...new Int8Array(f.target.result)],
               Name: document.getElementById("name").value,
               Faname: document.getElementById("faname").value,
+              Gender: document.getElementById("gender").value,
+              BDate: document.getElementById("bdate").value,
+              Age: document.getElementById("age").value,
+              Date: document.getElementById("date").value,
+              Number: document.getElementById("number").value,
               Study: document.getElementById("study").value,
+              Exprence: document.getElementById("exprence").value,
+              Type: document.getElementById("type").value,
               Village: document.getElementById("Village").value,
               Post: document.getElementById("Post").value,
               Uni: document.getElementById("Uni").value,
               Upojela: document.getElementById("Upojela").value,
               Jela: document.getElementById("Jela").value,
-              BDate: document.getElementById("bdate").value,
-              Age: document.getElementById("age").value,
-              Type: document.getElementById("type").value,
-              Date: document.getElementById("date").value,
             }),
           })
             .then((res) => res.json())
             .then((data) => {
-              //  let d = JSON.parse(data);
-              alert("Notice added successfully");
+              alert("Teacher added successfully");
               console.log(data);
               //location.reload();
             })
@@ -433,36 +450,6 @@
         };
       });
 
-      // Sort results by id in descending order, take two
-      // and return the age as an integer.
-
-      //   function getData() {
-      //     fetch(
-      //       "https://script.google.com/macros/s/AKfycbxtGxPXltJPyyiN36lo9cPdnFmCH5uGDjiLZyN6gc4KsbLilnG5zgZrh1_viDA5djDE/exec"
-      //     )
-      //       .then((response) => response.json())
-      //       .then((data) => {
-      //         console.log(data.data);
-      //         for (let d of data.data) {
-      //           //console.log(d);
-      //           table.innerHTML += `
-      //           <tr  data-id='${d.Id}'>
-      //               <td class="inform">${d.Date}</td>
-      //               <td class="inform">${d.Subject}</td>
-      //               <td class="inform">
-      //                  ${d.Type}
-      //               </td>
-      //               <td class="viwe">
-      //                 <a href="${d.file}" class="bg-danger text-white py-1 px-2 rounded">
-      //                   <i class=" bi bi-download pe-2" id='delete'></i>Download
-      //                 </a>
-      //               </td>
-
-      //             </tr> `;
-      //         }
-      //       });
-      //   }
-      //   getData();
     </script>
   </body>
 </html>
